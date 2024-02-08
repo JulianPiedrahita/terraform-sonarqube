@@ -7,24 +7,21 @@ on:
 
 jobs:
 
-  check-code:
+  validate-terraform:
     runs-on: ubuntu-latest
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    # Set the working directory to vnet for the config files
-    defaults:
-        run:
-          shell: bash
-          working-directory: ./vnet
-
+    check-code:
+      runs-on: ubuntu-latest
+      
   steps:
+
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
-      with:
-        terraform_version: ${{ secrets.TERRAFORM_VERSION }}  
+#      with:
+#        terraform_version: ${{ secrets.TERRAFORM_VERSION }}  
 
      # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init

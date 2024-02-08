@@ -21,6 +21,8 @@ data "aws_route53_zone" "selected" {
   private_zone = false
 }
 
+
+
 resource "aws_route53_record" "domainName" {
   name    = "sonar"
   type    = "A"

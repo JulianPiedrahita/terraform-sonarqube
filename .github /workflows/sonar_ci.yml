@@ -9,9 +9,7 @@ jobs:
 
   validate-terraform:
     runs-on: ubuntu-latest
-    check-code:
-      runs-on: ubuntu-latest
-      
+
   steps:
 
     # Checkout the repository to the GitHub Actions runner

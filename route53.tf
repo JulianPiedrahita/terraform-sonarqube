@@ -1,8 +1,3 @@
-data "aws_route53_zone" "selected" {
-  name         = "sonarqube.credicorp"
-  private_zone = false
-}
-
 resource "aws_route53_record" "sonarQube" {
   name    = "sonar"
   type    = "A"

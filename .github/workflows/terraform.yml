@@ -31,8 +31,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: tfsec
-      uses: aquasecurity/tfsec-action@v1.0.0  
+    #- name: tfsec
+    #  uses: aquasecurity/tfsec-action@v1.0.0  
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform

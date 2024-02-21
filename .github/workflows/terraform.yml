@@ -50,6 +50,17 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -input=false
 
+    - name: approval manual 
+      uses: macnev2013/manual-approval@latest
+      with:
+        secret: ${{ github.TOKEN }}
+        approvers: user1,user2
+        minimum-approvals: 1
+        approval-wait: 60
+        issue-title: 'Manual Approval'
+        issue-body: |
+            "Issue Body"
+
       # On push to "main", build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
 #    - name: Terraform Apply

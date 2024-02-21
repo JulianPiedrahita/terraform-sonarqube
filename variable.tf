@@ -1,4 +1,4 @@
-variable "domainName" {
-  default = "sonar.robofarming.link"
+variable "sonarQube" {
+  default = "sonar.credicorp.link"
   type    = string
 }

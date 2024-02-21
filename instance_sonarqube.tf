@@ -1,5 +1,5 @@
 resource "aws_instance" "Sonarqube" {
-  ami                    = "ami-0557a15b87f6559cf" # free tier AMI image
+  ami                    = "ami-0cf10cdf9fcd62d37" # free tier AMI image
   instance_type          = "t2.medium"
   user_data              = file("sonar_script.sh")
   vpc_security_group_ids = [aws_security_group.ec2.id]

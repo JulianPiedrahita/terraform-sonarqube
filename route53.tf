@@ -1,15 +1,9 @@
-
-
-
-
 data "aws_route53_zone" "selected" {
-  name         = "robofarming.link"
+  name         = "sonarqube.credicorp"
   private_zone = false
 }
 
-
-
-resource "aws_route53_record" "domainName" {
+resource "aws_route53_record" "sonarQube" {
   name    = "sonar"
   type    = "A"
   zone_id = data.aws_route53_zone.selected.zone_id

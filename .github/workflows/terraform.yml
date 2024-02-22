@@ -52,11 +52,12 @@ jobs:
 
     - name: Wait for approval
       uses: trstringer/manual-approval@v1
-      timeout-minutes: 20
       with:
-          secret: ${{ steps.generate_token.outputs.token }}
           approvers: JulianPiedrahita
           minimum-approvals: 1
+          issue-body: "Please approve or deny the deployment infra"
+          exclude-workflow-initiator-as-approver: false
+
           
 
       # On push to "main", build or change infrastructure according to Terraform configuration files

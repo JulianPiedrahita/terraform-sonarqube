@@ -55,6 +55,7 @@ jobs:
     - name: Wait for approval
       uses: trstringer/manual-approval@v1
       with:
+        secret: ${{ secrets.GITHUB_TOKEN }}
         approvers: JulianPiedrahita
         minimum-approvals: 1
         issue-body: "Please approve or deny the deployment infra"

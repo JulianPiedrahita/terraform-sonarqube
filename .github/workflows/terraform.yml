@@ -6,6 +6,8 @@ on:
 
 permissions:
   contents: read
+  issues: write
+
 
 jobs:
   terraform:
@@ -53,10 +55,10 @@ jobs:
     - name: Wait for approval
       uses: trstringer/manual-approval@v1
       with:
-          approvers: JulianPiedrahita
-          minimum-approvals: 1
-          issue-body: "Please approve or deny the deployment infra"
-          exclude-workflow-initiator-as-approver: false
+        approvers: JulianPiedrahita
+        minimum-approvals: 1
+        issue-body: "Please approve or deny the deployment infra"
+        exclude-workflow-initiator-as-approver: false
 
           
 
